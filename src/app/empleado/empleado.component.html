@@ -1,0 +1,43 @@
+<div class="container custom-container-2">
+    <div *ngIf="Empleado.length !== 0">
+      <h3 class="mb-3 text-center">Empleados</h3>
+      
+      <div class="col-md-12">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">Id empleado</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Apellidos</th>
+              <th scope="col">Numero documento</th>
+              <th scope="col">Correo</th>
+              <th scope="col">Telefono</th>   
+              <th scope="col">Estado</th>   
+              <th scope="col">Salario</th>
+              <th scope="col">Departamento asociado</th>
+              <th scope="col">Funciones</th>  
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let empleado of Empleado">
+              <td>{{empleado.idEmpleado}}</td>
+              <td>{{empleado.nombre}}</td>
+              <td>{{empleado.apellidos}}</td>
+              <td>{{empleado.numeroDocumento}}</td>
+              <td>{{empleado.correo}}</td>
+              <td>{{empleado.telefono}}</td>
+              <td *ngIf="empleado.activo == true" >Activo</td>
+              <td *ngIf="empleado.activo == false" >Inactivo</td>
+              <td>{{empleado.salario}}</td>
+              <td>{{empleado.departamento.nombre}}</td>
+              <td>
+                    <span class="btn btn-success btn-lg btn-block" >Ver</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  
+    </div>
+  
+  </div>

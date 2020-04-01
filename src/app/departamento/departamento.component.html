@@ -1,0 +1,36 @@
+<div class="container custom-container-2">
+    <div *ngIf="DepartamentoEmpleadoDTO.length !== 0">
+      <h3 class="mb-3 text-center">Departamentos</h3>
+      
+      <div class="col-md-12">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">Id departamento</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Descripcion</th>
+              <th scope="col">Codigo</th>
+              <th scope="col">Empleados</th>
+              <th scope="col">Funciones</th>   
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let dep of DepartamentoEmpleadoDTO">
+              <td>{{dep.idDepartamento}}</td>
+              <td>{{dep.nombre}}</td>
+              <td>{{dep.descripcion}}</td>
+              <td>{{dep.codigo}}</td>
+              <td>
+                    <span class="btn btn-success btn-lg btn-block" >Ver</span>
+              </td>
+              <td>
+                  <span class="btn btn-success btn-lg btn-block" >Ver</span>
+            </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  
+    </div>
+  
+  </div>
